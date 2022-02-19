@@ -1,58 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, {useEffect} from 'react';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Navbar} from "./app/components/Navbar";
+import UserPage from "./features/users/UserPage";
+import {useAppDispatch} from "./app/hooks";
+import {useSelector} from "react-redux";
+import {RootState} from "./app/store";
+import {fetchUsers} from "./features/users/usersSlice";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+    const dispatch = useAppDispatch()
+    const users = useSelector<RootState>(state => state.users)
+    const user = useSelector<RootState>(state => state.users)
+
+    // useEffect(() => {
+    //     console.log('usereffect')
+    //     if (users === undefined) {
+    //         dispatch(fetchUsers())
+    //     }
+    //     console.log(users);
+    // }, [users, dispatch])
+
+    console.log(users);
+    return (
+        <BrowserRouter>
+            <Navbar/>
+            <div className="App">
+                <Routes>
+                    <Route path='/users/:userId' element={<UserPage/>}/>
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
