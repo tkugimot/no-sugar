@@ -23,7 +23,7 @@ function App() {
 
     console.log(users);
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/no-sugar">
             <Navbar/>
             <div className="App">
                 <Routes>
