@@ -6,7 +6,7 @@ import UserPage from "./features/users/UserPage";
 import {useAppDispatch} from "./app/hooks";
 import {useSelector} from "react-redux";
 import {RootState} from "./app/store";
-import {fetchUsers} from "./features/users/usersSlice";
+import {IndexPage} from "./app/components/IndexPage";
 
 function App() {
     const dispatch = useAppDispatch()
@@ -27,6 +27,7 @@ function App() {
             <Navbar/>
             <div className="App">
                 <Routes>
+                    <Route path="/" element={<IndexPage />} />
                     <Route path='/users/:userId' element={<UserPage/>}/>
                 </Routes>
             </div>
