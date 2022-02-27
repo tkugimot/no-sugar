@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/no-sugar/static/css/main.c6bebc4e.css",
-    "main.js": "/no-sugar/static/js/main.8f2bd941.js",
-    "static/media/logo.svg": "/no-sugar/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
+    "main.css": "/no-sugar/static/css/main.a2799fbe.css",
+    "main.js": "/no-sugar/static/js/main.7aae3774.js",
     "index.html": "/no-sugar/index.html",
-    "main.c6bebc4e.css.map": "/no-sugar/static/css/main.c6bebc4e.css.map",
-    "main.8f2bd941.js.map": "/no-sugar/static/js/main.8f2bd941.js.map"
+    "main.a2799fbe.css.map": "/no-sugar/static/css/main.a2799fbe.css.map",
+    "main.7aae3774.js.map": "/no-sugar/static/js/main.7aae3774.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6bebc4e.css",
-    "static/js/main.8f2bd941.js"
+    "static/css/main.a2799fbe.css",
+    "static/js/main.7aae3774.js"
   ]
 }
