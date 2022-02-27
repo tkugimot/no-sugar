@@ -48,3 +48,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - https://www.tailwindtoolbox.com/templates/minimal-blog
 - https://www.tailwindtoolbox.com/
 - https://tailwindcss.com/docs/guides/create-react-app
+- https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/
+- https://storybook.js.org/tutorials/intro-to-storybook/react/ja/get-started/

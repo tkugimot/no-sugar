@@ -7,6 +7,7 @@ import {useAppDispatch} from "./app/hooks";
 import {useSelector} from "react-redux";
 import {RootState} from "./app/store";
 import {IndexPage} from "./app/components/IndexPage";
+import {BlogPage} from "./app/components/BlogPage";
 
 function App() {
     const dispatch = useAppDispatch()
@@ -21,13 +22,13 @@ function App() {
     //     console.log(users);
     // }, [users, dispatch])
 
-    console.log(users);
     return (
         <BrowserRouter basename="/no-sugar">
             <Navbar/>
-            <div className="App">
+            <div className="App bg-amber-50 container w-full md:max-w-3xl mx-auto pt-20">
                 <Routes>
                     <Route path="/" element={<IndexPage />} />
+                    <Route path="/blogs" element={<BlogPage />} />
                     <Route path='/users/:userId' element={<UserPage/>}/>
                 </Routes>
             </div>
